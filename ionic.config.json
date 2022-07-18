@@ -1,0 +1,7 @@
+{
+  "name": "Restaurante_don_jose",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
