@@ -9,7 +9,7 @@ export class ProductosService {
     {
       id:'1',
       titulo:'Cazuela',
-      url : "https://www.comidastipicaschilenas.com/wp-content/uploads/2020/07/Receta-de-cazuela-de-osobuco.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1",
+      url : "https://www.parral.cl/images/t030.png?crc=173551096",
       comentarios : ["delicioso plato", "un plato para repetirse"]
     },
 

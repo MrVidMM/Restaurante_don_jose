@@ -9,21 +9,59 @@ ion-content {
         ion-row {
             // el 20% del tamaño de la pantalla
             height: 20vh;
-            //Teniamos slides
-            ion-slides {
-                // ya que contiene la imagen le dare 100% de alto
-                height: 100%;
-                // y un fondo, hasta el momento podremos ver el fondito gris
-                background-color: #ccc;
-                // Lo redondeare el lado izquierdo ambas esquinas
-                border-radius: 40px 0 0 40px;
+            // Teniamos un ion-col dentro del ion-row
+            ion-col {
+                padding: 0;
+                ion-slides {
+                    // ya que contiene la imagen le dare 100% de alto
+                    height: 100%;
+                    // y un fondo, hasta el momento podremos ver el fondito gris
+                    background-color: #ccc;
+                    // Lo redondeare el lado izquierdo ambas esquinas
+                    border-radius: 40px 0 0 40px;
 
-                // Y aca teniamos la imagen
-                img {
-                    // Le dare un ancho maximo de 90% del contenedor
-                    width: 90%;
-                    // Y un alto maximo de 90% del contenedor
-                    height: 90%;
+                    // Y aca teniamos la imagen
+                    img {
+                        // Le dare un ancho maximo de 90% del contenedor
+                        width: 90%;
+                        // Y un alto maximo de 90% del contenedor
+                        height: 90%;
+                    }
+                }
+
+                // Ahora lo que le diremos al sistema es que si hay un botón dentro
+                // de esta columna quiero que se aplique un estilo
+                /*
+                ion-button {
+                    background-color: red;
+                }
+                */
+                /*
+                Si yo dejaba eso de esa manera todos los botones me iban a cambiar
+                entonces debo usar el signo ">" lo que se encargara de que estrictamente
+                este asociado con la columna en especifico, ya que los otros botones estan en un div
+                esta vez no cambiaran de color, te invito a hacer la prueba
+                */
+                // Forma correcta
+                > ion-button {
+                    // Cambiamos de color a gris
+                    background-color: gray;
+                    // Convertimos la posición a absoluta
+                    position: absolute;
+                    // Con z-index pasamos hacia el frente de los demás objetos
+                    z-index: 99;
+                    // Con transform le dijimos que fuera de moviera en un -50% (izquierda)
+                    transform: translateX(-50%);
+                    // Ancho de 40 pixeles
+                    width: 40px;
+                    // Alto de 40 pixeles
+                    height: 40px;
+                    // Un borde de 50% quedando circular
+                    border-radius: 50%;
+                    // Tamaño de fuente de 11 pixeles
+                    font-size: 11px;
+                    // Oscurecerlo un poco
+                    font-weight: 700;
                 }
             }
         }
