@@ -1,0 +1,55 @@
+// Dentro de ion-conten
+ion-content {
+    ion-grid {
+        // Asignaremos 0 de relleno 
+        padding: 0;
+        // El vh es la altura de la pantalla y el 6 es el 6% de la pantalla
+        margin-top: 6vh;
+        // Teneiamos ion-row
+        ion-row {
+            // el 20% del tamaño de la pantalla
+            height: 20vh;
+            //Teniamos slides
+            ion-slides {
+                // ya que contiene la imagen le dare 100% de alto
+                height: 100%;
+                // y un fondo, hasta el momento podremos ver el fondito gris
+                background-color: #ccc;
+                // Lo redondeare el lado izquierdo ambas esquinas
+                border-radius: 40px 0 0 40px;
+
+                // Y aca teniamos la imagen
+                img {
+                    // Le dare un ancho maximo de 90% del contenedor
+                    width: 90%;
+                    // Y un alto maximo de 90% del contenedor
+                    height: 90%;
+                }
+            }
+        }
+    }
+}
+
+// Ya que creamos una clase por nosotros mismos la editaremos fuera de ion-content
+.linea-gris {
+    // Agregamos un borde de 1 pixel solido y gris
+    border: 1px solid #ddd;
+    // Agregaremos margenes y un ancho
+    margin: 20px 0 20px 40px;
+    // Ya que se nos desvasa agregamos que el ancho maximo sea de 80%
+    width: 80%;
+}
+
+ion-footer {
+    // De esta manera bajo en footer al final de la pagina 
+    position: absolute;
+    bottom: 0px;
+    .desc {
+        // Heredare de una variable de ionic un color
+        background: var(--ion-color-dark);
+        // En la esquina superior derecha aplico un redondeo de 10px
+        border-radius: 0 10px 0 0;
+        // Aca no puedo agregar una posición absoluta ya que tiene un contenedor y no 
+        // llegara al final de la pagina lo aplico en el footer completo.
+    }
+}
