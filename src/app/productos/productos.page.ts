@@ -16,4 +16,8 @@ export class ProductosPage implements OnInit {
     this.productos = this.Servicio.getProductos()
   }
 
+  ionViewWillEnter() {
+    this.productos = this.Servicio.getProductos()
+  }
+
 }
